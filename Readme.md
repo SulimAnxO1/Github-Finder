@@ -4,7 +4,9 @@ A sleek and powerful **GitHub Finder App** that allows users to search for any G
 
 ---
 
-🌐 [**Live Site**](https://sulimanxo1.github.io/Github-Finder/)
+## 🚀 Live Demo
+
+### 🌐 [**Live Site**](https://sulimanxo1.github.io/Github-Finder/)
 
 ---
 
