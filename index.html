@@ -3,10 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github Finder</title>
+    <title>Github User Finder</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
   </head>
   <body>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <!-- HEADER -->
+      <header>
+        <h1><i class="fab fa-github"></i> Github User Finer</h1>
+        <p>Search for any GitHub user to see their profile and repositories</p>
+      </header>
+
+      <!-- SEARCH BAR -->
+      <div class="search-container">
+        <input
+          type="text"
+          id="search"
+          placeholder="Enter Github Username"
+          autocomplete="off" />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <!-- PROFILE CONTAINER -->
+      <div id="profile-container" class="hidden">
+        <div class="profile-header">
+          <!-- PROFILE PICTURE -->
+          <img src="" alt="Profile avatar" />
+
+          <!-- PROFILE INFO -->
+          <div class="profile-info">
+            <!-- USER'S NAME -->
+            <h2 id="name"></h2>
+            <!-- USERNAME -->
+            <p id="username"></p>
+            <!-- BIO -->
+            <p id="bio"></p>
+            <!-- PROFILE LOCATION & JOIN DATE -->
+            <div class="location-date">
+              <!-- LOCATION -->
+              <p>
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="location"> Not Specified </span>
+              </p>
+
+              <!-- JOINED DATE -->
+              <p>
+                <i class="far fa-calender-alt"></i>
+                Joined
+                <span id="joined-date"></span>
+              </p>
+            </div>
+
+            <!-- PROFILE LINK -->
+            <a id="profile-link" target="_blank" class="btn">View Profile</a>
+          </div>
+        </div>
+
+        <!-- USER STATS -->
+        <div class="stats">
+          <!-- FOLLOWER -->
+          <div class="stat">
+            <i class="fas fa-users"></i>
+            <span id="followers"></span>
+            followers
+          </div>
+
+          <!-- FOLLOWING -->
+          <div class="stat">
+            <i class="fas fa-user-friends"></i>
+            <span class="following"></span>
+            following
+          </div>
+
+          <!-- REPOSITORIES -->
+          <div class="stat">
+            <i class="fas fa-code-branch"></i>
+            <span class="repos"></span>
+            repositories
+          </div>
+        </div>
+
+        <!-- ADDITIONAL INFO -->
+        <div class="additional-info">
+          <!-- COMPANY -->
+          <div class="info-item" id="company-container">
+            <i class="fas fa-building"></i>
+            <span id="company">Not Specified</span>
+          </div>
+
+          <!-- BLOG -->
+          <div class="info-item" id="blog-container">
+            <i class="fas fa-link"></i>
+            <a id="blog" target="_blank">No Website</a>
+          </div>
+
+          <!-- TWITTER -->
+          <div class="info-item" id="twitter-container">
+            <i class="fab fa-twitter"></i>
+            <a id="twitter">No Twitter</a>
+          </div>
+        </div>
+
+        <!-- REPOSITORY SECTION -->
+        <div class="repos-section">
+          <h3>Latest Repositories</h3>
+
+          <!-- REPOSITORY CONTAINER -->
+          <div class="repos-container" id="repos-container">
+            <!-- Repositories will be inserted here dynamically -->
+
+            <!-- LOADING REPOSITORY -->
+            <div class="loading-repos">Loading Repositories...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERROR CONTAINER -->
+      <div class="hidden" id="error-container">
+        <p>No user found! Please try another username.</p>
+      </div>
+    </div>
+
+    <!-- JS -->
     <script src="script.js"></script>
   </body>
 </html>
