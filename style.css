@@ -1,0 +1,21 @@
+/* BASIC RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CSS VARIABLES */
+
+:root {
+  --primary-color: #8bdafa;
+  --primary-dark: #5ccaf6;
+  --primary-light: #b5ecfd;
+  --bg-dark: #1a1a1a;
+  --card-bg: #252525;
+  --text-light: #f3f4f6;
+  --text-gray: #9ca3af;
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 10px;
+}
