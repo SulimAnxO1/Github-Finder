@@ -51,7 +51,9 @@ async function searchUser() {
   }
 }
 
+// FETCH REPOSITORY
 async function fetchRepositories(reposUrl) {
+  // shows when repos loading
   reposContainer.innerHTML =
     '<div class="loading-repos">Loading repositories...</div>';
 
@@ -64,6 +66,7 @@ async function fetchRepositories(reposUrl) {
   }
 }
 
+// DISPLAY REPOSITORY
 function displayRepos(repos) {
   if (repos.length === 0) {
     reposContainer.innerHTML =
@@ -112,6 +115,7 @@ function displayRepos(repos) {
   });
 }
 
+// DISPLAY USER INFO/DATA
 function displayUserData(user) {
   avatar.src = user.avatar_url;
   nameElement.textContent = user.name || user.login;
@@ -155,11 +159,13 @@ function displayUserData(user) {
   profileContainer.classList.remove("hidden");
 }
 
+// SHOW ERROR
 function showError() {
   errorContainer.classList.remove("hidden");
   profileContainer.classList.add("hidden");
 }
 
+// JOINED DATE
 function formatDate(dateString) {
   return new Date(dateString).toLocaleDateString("en-US", {
     year: "numeric",
